@@ -6,9 +6,11 @@
 
 | מערכת | גרסאות נתמכות |
 |---|---|
-| Ubuntu | 20.04, 22.04, 24.04 |
-| Debian | 10, 11, 12 (3 גרסאות אחורה) |
-| CentOS / RHEL clones | 7, 8, 9, וכן Rocky/Alma/Stream |
+| Ubuntu 
+| Debian 
+| CentOS 
+
+הסקריפטים נבדקו על הגרסה האחרונה של כל אחת מההפצות.
 
 אם `sudo` לא מותקן במערכת מינימלית (למשל קונטיינר), התקן קודם:
 `apt install sudo` (Ubuntu/Debian) או `yum install sudo` / `dnf install sudo` (CentOS).
