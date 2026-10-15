@@ -1,7 +1,19 @@
+# מדריך ראשי — ניהול משתמשים, קבוצות והרשאות
 
-|---|---|---|---|---|
+## תאימות
+כל הסקריפטים בתיקיית `linux/` מבוססים על `shadow-utils` ו-`coreutils`, שהם חלק
+סטנדרטי מכל ההפצות הבאות ללא שינוי בפקודות עצמן:
 
+| מערכת | גרסאות נתמכות |
+|---|---|
+| Ubuntu | 20.04, 22.04, 24.04 |
+| Debian | 10, 11, 12 (3 גרסאות אחורה) |
+| CentOS / RHEL clones | 7, 8, 9, וכן Rocky/Alma/Stream |
 
+אם `sudo` לא מותקן במערכת מינימלית (למשל קונטיינר), התקן קודם:
+`apt install sudo` (Ubuntu/Debian) או `yum install sudo` / `dnf install sudo` (CentOS).
+
+תיקיית `windows/` מכילה PowerShell מקביל, נבדק מבחינת תחביר ל-PowerShell 5.1+ / 7+.
 
 ---
 
@@ -75,8 +87,9 @@
 | `visudo` | עריכה בטוחה של הרשאות sudo, במקום לערוך `/etc/sudoers` ישירות |
 | `gpasswd -A admin group` | מינוי מנהל לקבוצה שיכול להוסיף/להסיר חברים בלי sudo |
 
- Windows
+## אופציות נוספות שכדאי להכיר — Windows
 
+| פקודה | מה היא עושה |
 |---|---|
 | `Disable-LocalUser` / `Enable-LocalUser` | נעילת חשבון / פתיחתו בלי למחוק |
 | `Get-LocalGroupMember -Group X` | הצגת כל החברים בקבוצה מסוימת |
@@ -88,4 +101,3 @@
 **הערה**: ל-`last` (היסטוריית התחברויות) אין מקבילה ישירה ב-Windows.
 הכי קרוב זה Event Viewer עם Event ID 4624, או `Get-WinEvent`.
 `who` ו-`w` (מי מחובר עכשיו) כן יש מקבילה: `quser` / `query user`.
->>>>>>> ea16a3355dbb4cfcc58bf17e6b43e70e0e2399c3
